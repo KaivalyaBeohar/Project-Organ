@@ -47,10 +47,9 @@ nav {
     text-decoration: none;
     color: #005C2F;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a {
     color: #00A651;
 }
 
@@ -99,7 +98,6 @@ nav {
     font-weight: 500;
     cursor: pointer;
     border: none;
-    transition: transform 0.3s ease;
 }
 
 .primary-btn {
@@ -113,7 +111,7 @@ nav {
     color: #005C2F;
 }
 
-.primary-btn:hover, .secondary-btn:hover {
+.primary-btn, .secondary-btn {
     transform: translateY(-2px);
 }
 
@@ -145,12 +143,11 @@ nav {
     text-align: center;
     background-color: #ffffff;
     border-radius: 10px;
-    transition: transform 0.3s ease;
     border: 1px solid #E8F5E9;
     box-shadow: 0 4px 15px rgba(0, 84, 47, 0.1);
 }
 
-.feature-card:hover {
+.feature-card {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 84, 47, 0.15);
 }
@@ -179,11 +176,10 @@ nav {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
     border: 1px solid #E8F5E9;
 }
 
-.model-card:hover {
+.model-card {
     transform: translateY(-5px);
 }
 
@@ -240,10 +236,9 @@ footer {
 .footer-section a {
     color: #b2bec3;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.footer-section a:hover {
+.footer-section a {
     color: white;
 }
 
@@ -262,10 +257,9 @@ footer {
     color: white;
     text-decoration: none;
     border-radius: 4px;
-    transition: transform 0.3s ease;
 }
 
-.model-btn:hover {
+.model-btn {
     transform: translateY(-2px);
 }
 
@@ -308,10 +302,9 @@ footer {
     background-color: #0984e3;
     color: white;
     cursor: pointer;
-    transition: transform 0.3s ease;
 }
 
-.control-buttons button:hover {
+.control-buttons button {
     transform: translateY(-2px);
 }
 
@@ -342,19 +335,20 @@ footer {
     color: #005C2F;
 }
 
+
 /* Sharp Edges and Borders */
 .model-card, .feature-card, .primary-btn, .secondary-btn, .login-btn {
     border-radius: 4px;
 }
 
 /* Hover Effects */
-.primary-btn:hover, .model-btn:hover {
-    background-color: #008C44;
+.primary-btn, .model-btn {
+    background-color: #00b959;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 166, 81, 0.3);
 }
 
-.feature-card:hover {
+.feature-card {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 84, 47, 0.15);
 }
@@ -401,4 +395,43 @@ body {
     --light-green: #E8F5E9;
     --deepest-green: #003D20;
     --white: #ffffff;
+}
+
+/* Add these at the end of your existing styles */
+
+#model-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#model-container canvas {
+    width: 100%;
+    height: 100%;
+}
+
+#controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1000;
+}
+
+#controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #00A651;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+#controls button:hover {
+    background: #008c44;
 }

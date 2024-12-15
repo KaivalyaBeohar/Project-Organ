@@ -1,6 +1,7 @@
 <!DOCTYPE html >
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,7 +37,7 @@
         </div>
         <div class="hero-image">
             <div class="floating-model">
-                <img src="https://via.placeholder.com/500x400" alt="3D Anatomy Model">
+                <img src="skull.png" alt="3D Anatomy Model">
                 <div class="pulse-effect"></div>
             </div>
         </div>
@@ -67,21 +68,21 @@
         <h2>Featured 3D Models</h2>
         <div class="model-grid">
             <div class="model-card">
-                <img src="https://via.placeholder.com/300x200" alt="Skeletal System">
+                <img src="images/nose2.jpeg" alt="Skeletal System">
                 <div class="model-content">
-                    <span class="model-tag">3D Model of Nose</span>
+                    <span class="model-tag">Interactive 3D</span>
                     <h3>Nose</h3>
                     <p>Complete 3D model of the human nose</p>
-                    <a href="model-viewer.html" class="model-btn">View Model</a>
+                    <a href="model-view.html?model=nose" class="model-btn">View Model</a>
                 </div>
             </div>
             <div class="model-card">
-                <img src="https://via.placeholder.com/300x200" alt="Nervous System">
+                <img src="images/brain.jpeg" alt="Nervous System">
                 <div class="model-content">
-                    <span class="model-tag">Nose</span>
+                    <span class="model-tag">Interactive 3D</span>
                     <h3>Brain & Nerves</h3>
                     <p>Detailed neural pathways and brain structure exploration.</p>
-                    <a href="model-viewer.html" class="model-btn">View Model</a>
+                    <a href="model-view.html?model=brain" class="model-btn">View Model</a>
                 </div>
             </div>
         </div>
@@ -109,7 +110,9 @@
             </div>
             <div class="footer-section">
                 <h3>About</h3>
-                <li><a href="#about">About</a></li>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                </ul>
             </div>
         </div>
     </footer>
