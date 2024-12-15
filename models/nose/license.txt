@@ -1,0 +1,11 @@
+Model Information:
+* title:	Nose
+* source:	https://sketchfab.com/3d-models/nose-53edbd1433f14a56b1d393ffed41a77c
+* author:	tracyn198 (https://sketchfab.com/tracyn198)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Nose" (https://sketchfab.com/3d-models/nose-53edbd1433f14a56b1d393ffed41a77c) by tracyn198 (https://sketchfab.com/tracyn198) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
