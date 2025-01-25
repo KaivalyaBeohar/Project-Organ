@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediDash - Organ Health Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            color: #333;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+        .sidebar h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #34495e;
+            display: block;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .organ-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .organ-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .organ-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .organ-content {
+            padding: 15px;
+        }
+        .organ-tag {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+        .organ-card h3 {
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+        .organ-card p {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        .organ-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        .organ-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Project Organ</h2>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#heart">Heart</a></li>
+            <li><a href="#lungs">Lungs</a></li>
+            <li><a href="#brain">Brain</a></li>
+            <li><a href="#liver">Liver</a></li>
+            <li><a href="#kidneys">Kidneys</a></li>
+            <li><a href="#kidneys">About</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Project Organ Dashboard</h1>
+        </div>
+        <p>Welcome to [], your comprehensive organ health monitoring system. Select an organ to view detailed health metrics and analysis.</p>
+        <div class="organ-grid">
+            <div class="organ-card">
+                <img src="/placeholder.svg?height=150&width=250" alt="Heart">
+                <div class="organ-content">
+                    <h3>Heart</h3>
+                    <p>Monitor cardiovascular health and explore heart structures.</p>
+                    <a href="#heart-details" class="organ-btn">View Model</a>
+                </div>
+            </div>
+            <div class="organ-card">
+                <img src="/placeholder.svg?height=150&width=250" alt="Lungs">
+                <div class="organ-content">
+                    <h3>Lungs</h3>
+                    <p>Track respiratory function and examine lung anatomy.</p>
+                    <a href="#lungs-details" class="organ-btn">View Model</a>
+                </div>
+            </div>
+            <div class="organ-card">
+                <img src="images\brain.webp" alt="Brain">
+                <div class="organ-content">
+                    <h3>Brain</h3>
+                    <p>Assess neurological activity and explore brain regions.</p>
+                    <a href="#brain-details" class="organ-btn">View Model</a>
+                </div>
+            </div>
+            <div class="organ-card">
+                <img src="/placeholder.svg?height=150&width=250" alt="Liver">
+                <div class="organ-content">
+                    <h3>Liver</h3>
+                    <p>Evaluate hepatic performance and liver structure.</p>
+                    <a href="#liver-details" class="organ-btn">View Model</a>
+                </div>
+            </div>
+            <div class="organ-card">
+                <img src="images\kidneys.jpg" alt="Kidneys">
+                <div class="organ-content">
+                    <h3>Kidneys</h3>
+                    <p>Analyze renal function and kidney anatomy.</p>
+                    <a href="#kidneys-details" class="organ-btn">View Model</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
