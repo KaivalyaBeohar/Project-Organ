@@ -1,14 +1,15 @@
-<!DOCTYPE html >
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Learning Zone</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
     <nav>
@@ -20,7 +21,7 @@
                 <li><a href="#models">3D Models</a></li>
                 <li><a href="#library">Library</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#login" class="login-btn">Login</a></li>
+                <li><a href="{% url 'login' %}" class="login-btn">Login</a></li>
             </ul>
         </div>
     </nav>
@@ -37,7 +38,7 @@
         </div>
         <div class="hero-image">
             <div class="floating-model">
-                <img src="/images/vector.png" alt="3D Anatomy Model">
+                <img src="{% static 'vector.png' %}" alt="3D Anatomy Model">
                 <div class="pulse-effect"></div>
             </div>
         </div>
@@ -68,21 +69,21 @@
         <h2>Featured 3D Models</h2>
         <div class="model-grid">
             <div class="model-card">
-                <img src="images/nose.jpg" alt="Skeletal System">
+                <img src="{% static 'images/nose.jpg' %}" alt="nose">
                 <div class="model-content">
                     <span class="model-tag">Interactive 3D</span> 
                     <h3>Nose</h3>
                     <p>Complete 3D model of the human nose</p>
-                    <a href="model-view.html?model=nose" class="model-btn">View Model</a>
+                    {% comment %} <a href="{% url 'model_view' %}?model=nose" class="model-btn">View Model</a> {% endcomment %}
                 </div>
             </div>
             <div class="model-card">
-                <img src="images/brain.webp" alt="Nervous System">
+                <img src="{% static 'images/brain.webp' %}" alt="brain">
                 <div class="model-content">
                     <span class="model-tag">Interactive 3D</span> 
                     <h3>Brain & Nerves</h3>
                     <p>Detailed neural pathways and brain structure exploration.</p>
-                    <a href="model-view.html?model=brain" class="model-btn">View Model</a>
+                    {% comment %} <a href="{% url 'model_view' %}?model=brain" class="model-btn">View Model</a> {% endcomment %}
                 </div>
             </div>
         </div>
@@ -118,4 +119,3 @@
     </footer>
 </body>
 </html>
-
