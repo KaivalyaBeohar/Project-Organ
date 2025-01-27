@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Learning Zone</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -18,9 +18,7 @@
                 <span class="dna-icon">🧬</span> 3D Learning Zone
             </div>
             <ul class="nav-links">
-                <li><a href="#models">3D Models</a></li>
-                <li><a href="#library">Library</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'login' %}" class="login-btn">Login</a></li>
             </ul>
         </div>
@@ -32,8 +30,7 @@
             <p>Innovative educational platform designed to teach students about
                 the human body's sensory organs through interactive 3D models, quizzes, storyline and with a parent's dashboard.</p>
             <div class="hero-buttons">
-                <button class="primary-btn">Start Exploring</button>
-                <button class="secondary-btn">View Library</button>
+                <a href="{% url 'login' %}" class="primary-btn">Start Exploring</a>
             </div>
         </div>
         <div class="hero-image">
@@ -69,21 +66,43 @@
         <h2>Featured 3D Models</h2>
         <div class="model-grid">
             <div class="model-card">
-                <img src="{% static 'images/nose.jpg' %}" alt="nose">
-                <div class="model-content">
-                    <span class="model-tag">Interactive 3D</span> 
-                    <h3>Nose</h3>
-                    <p>Complete 3D model of the human nose</p>
-                    {% comment %} <a href="{% url 'model_view' %}?model=nose" class="model-btn">View Model</a> {% endcomment %}
-                </div>
-            </div>
-            <div class="model-card">
-                <img src="{% static 'images/brain.webp' %}" alt="brain">
+                <img src="{% static 'images/brain.jpg' %}" alt="Nervous System">
                 <div class="model-content">
                     <span class="model-tag">Interactive 3D</span> 
                     <h3>Brain & Nerves</h3>
                     <p>Detailed neural pathways and brain structure exploration.</p>
-                    {% comment %} <a href="{% url 'model_view' %}?model=brain" class="model-btn">View Model</a> {% endcomment %}
+                </div>
+            </div>
+            <div class="model-card">
+                <img src="{% static 'images/heart.jpg' %}" alt="Heart">
+                <div class="model-content">
+                    <span class="model-tag">Interactive 3D</span> 
+                    <h3>Heart</h3>
+                    <p>Monitor cardiovascular health and explore heart structures.</p>
+                </div>
+            </div>
+            <div class="model-card">
+                <img src="{% static 'images/lungs.jpg' %}" alt="Lungs">
+                <div class="model-content">
+                    <span class="model-tag">Interactive 3D</span> 
+                    <h3>Lungs</h3>
+                    <p>Track respiratory function and examine lung anatomy.</p>
+                </div>
+            </div>
+            <div class="model-card">
+                <img src="{% static 'images/liver.jpg' %}" alt="Liver">
+                <div class="model-content">
+                    <span class="model-tag">Interactive 3D</span> 
+                    <h3>Liver</h3>
+                    <p>Evaluate hepatic performance and liver structure.</p>
+                </div>
+            </div>
+            <div class="model-card">
+                <img src="{% static 'images/kidney.jpg' %}" alt="Kidney">
+                <div class="model-content">
+                    <span class="model-tag">Interactive 3D</span> 
+                    <h3>Kidney</h3>
+                    <p>Understand renal function and kidney anatomy.</p>
                 </div>
             </div>
         </div>
@@ -92,7 +111,7 @@
     <section class="cta"> 
         <div class="dna-animation"></div>
         <h2>Ready to Transform Your Anatomy Learning?</h2>
-        <button class="primary-btn">Get Started</button>
+        <a href="{% url 'login' %}" class="primary-btn">Get Started</a>
     </section>
 
     <footer>
@@ -104,15 +123,13 @@
             <div class="footer-section">
                 <h3>Explore</h3>
                 <ul> 
-                    <li><a href="#models">3D Models</a></li> 
-                    <li><a href="#systems">Body Systems</a></li>
-                    <li><a href="#library">Library</a></li>
+                    <li><a href="{% url 'information' %}">Organs</a></li> 
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>About</h3>
                 <ul>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
                 </ul>
             </div>
         </div>
