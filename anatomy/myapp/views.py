@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, 'home.html')
@@ -58,7 +59,7 @@ def LoginView(request):
 
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return redirect('dashboard')
         else:
             messages.error(request, "Invalid login credentials")
             return redirect('login')
@@ -68,3 +69,7 @@ def LoginView(request):
 def LogoutView(request):
     logout(request)
     return redirect('login')
+
+@login_required
+def DashboardView(request):
+    return render(request, 'dashboard.html')
